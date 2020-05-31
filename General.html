@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Disappearing Ninja</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            var HTMLstring = "";
+            for(var i = 0; i < 8; i++){
+                HTMLstring += '<img src= "./ninja.jpg" alt="ninja_picture">'
+            }
+            HTMLstring += '<button>Restore</button>'
+            $(document).ready(function(){
+                $(".container").append(HTMLstring)
+
+                $("img").click(function(){
+                    $(this).hide("slow");
+                })
+
+                $("button").click(function(){
+                    $("img").show();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container">
+
+        </div>
+    </body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+   $(document).ready(function(){
+    $('.hide1').click(function(){
+			$(".hide1").hide()
+		})
+    $('.hide2').click(function(){
+			$(".hide2").hide()
+		})
+
+  $('.hide3').click(function(){
+			$(".hide3").hide()
+		})
+
+  $('.hide4').click(function(){
+			$(".hide4").hide()
+		})
+
+  $('.show').click(function(){
+			$(".show").show(img id="ninja1")
+		})
+  })
+
+
+    </script>
+</head>
+<body>
+    <fieldset>
+		<legend>Hide</legend>
+		<p>Hides The ninja!</p>
+    <button class="hide1"><img id="ninja1" src="Ninja.jpg" alt="content icon"></button>
+    <button class="hide2"><img id="ninja1" src="Ninja.jpg" alt="content icon"></button>
+    <button class="hide3"><img id="ninja1" src="Ninja.jpg" alt="content icon"></button>
+    <button class="hide4"><img id="ninja1" src="Ninja.jpg" alt="content icon"></button>
+  </fieldset>
+  <fieldset>
+		<legend>Show</legend>
+		<img id = ninja1>
+    <button class="show">Restore</button>
+  </fieldset>
+
+
+
+</body>
+</html> -->
